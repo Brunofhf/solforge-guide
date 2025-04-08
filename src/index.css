@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --solforge-orange: #ffaa00;
+    --solforge-dark: #0f0f0f;
+    --solforge-darker: #1b1b1b;
+  }
+
+  body {
+    @apply antialiased bg-gradient-to-b from-[#0f0f0f] to-[#1f1f2f] min-h-screen text-[#f0f0f0] font-['Inter',sans-serif];
+  }
+
+  .prose {
+    @apply max-w-none;
+  }
+
+  .prose strong {
+    @apply text-[#ffaa00] font-semibold;
+  }
+
+  .prose ul {
+    @apply space-y-2 list-none pl-0;
+  }
+
+  .prose li {
+    @apply flex items-start gap-2 text-[#f0f0f0];
+  }
+
+  .prose li::before {
+    content: "•";
+    @apply text-[#ffaa00] text-xl leading-tight;
+  }
+
+  .section-card {
+    @apply bg-[#1b1b1b] rounded-lg overflow-hidden border border-[#ffaa00];
+  }
+
+  .section-card:hover {
+    box-shadow: 0 4px 25px rgba(255, 170, 0, 0.1);
+  }
+
+  .hero-title {
+    @apply font-bold text-[#ffaa00];
+  }
+
+  .hero-subtitle {
+    @apply text-[#f0f0f0];
+  }
+
+  .icon-container {
+    @apply bg-[#1b1b1b] border border-[#ffaa00];
+  }
+}
